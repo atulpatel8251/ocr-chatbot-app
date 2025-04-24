@@ -8,9 +8,9 @@ import platform
 import tempfile
 
 # Configure Tesseract based on platform
-if platform.system() == "Windows":
-    pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-    os.environ['TESSDATA_PREFIX'] = r"C:\Program Files\Tesseract-OCR\tessdata"
+# if platform.system() == "Windows":
+#     pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+#     os.environ['TESSDATA_PREFIX'] = r"C:\Program Files\Tesseract-OCR\tessdata"
 
 # Streamlit setup
 st.set_page_config(page_title="OCR PDF Chatbot", layout="wide")
