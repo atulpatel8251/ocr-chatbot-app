@@ -1,6 +1,7 @@
-
 streamlit
 pdf2image
 pytesseract
 Pillow
-
+poppler-utils
+tesseract-ocr-eng
+tesseract-ocr-hin
