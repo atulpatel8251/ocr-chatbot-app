@@ -1,3 +1,4 @@
+export ACCEPT_EULA=Y
 streamlit
 pdf2image
 pytesseract
