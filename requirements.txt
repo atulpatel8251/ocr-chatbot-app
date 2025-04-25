@@ -1,6 +1,7 @@
+pyodbc
 streamlit
 pdf2image
 pytesseract
 Pillow
-pyodbc
+
 
