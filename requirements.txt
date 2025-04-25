@@ -1,3 +1,4 @@
+msodbcsql17
 pyodbc
 streamlit
 pdf2image
