@@ -1,4 +1,5 @@
 streamlit
+pymssql
 pdf2image
 pytesseract
 Pillow
