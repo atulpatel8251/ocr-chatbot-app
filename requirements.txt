@@ -1,7 +1,9 @@
 streamlit
 pymssql
 pdf2image
-pytesseract
+tesseract-ocr
+tesseract-ocr-eng
+tesseract-ocr-hin
 Pillow
 
 
