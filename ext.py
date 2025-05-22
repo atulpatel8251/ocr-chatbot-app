@@ -18,7 +18,8 @@ st.title("📄 OCR PDF Chatbot")
 st.write("Upload a scanned PDF and ask questions based on its text.")
 
 # Upload PDF
-pdf_file = st.file_uploader("Upload scanned PDF file", type=["pdf"])
+# pdf_file = st.file_uploader("Upload scanned PDF file", type=["pdf"])
+pdf_file = st.file_uploader("Upload scanned PDF file", type="pdf", accept_multiple_files=True)
 
 # Initialize session state
 if 'extracted_text' not in st.session_state:
