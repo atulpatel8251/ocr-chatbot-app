@@ -8,11 +8,11 @@ import tempfile
 
 # Streamlit setup
 st.set_page_config(page_title="OCR PDF Chatbot", layout="wide")
-st.title("📄 OCR PDF Chatbot")
-st.write("Upload a scanned PDF and click 'Generate Text' to extract content using OCR.")
+st.title("📄 Image Extractor")
+st.write("Upload a scanned image and click 'Generate Text' to extract content using OCR.")
 
 # Upload PDF(s)
-pdf_files = st.file_uploader("Upload scanned PDF file(s)", type=["pdf"], accept_multiple_files=True)
+pdf_files = st.file_uploader("Upload scanned image file(s)", type=["pdf"], accept_multiple_files=True)
 
 # Session states
 if 'extracted_text' not in st.session_state:
@@ -28,11 +28,11 @@ if pdf_files:
 
 # Show 'Generate Text' button if PDFs are uploaded
 if st.session_state.pdf_uploaded:
-    if st.button("📝 Generate Text"):
+    if st.button("📝 Generating Text"):
         extracted_text = ""
 
         try:
-            with st.spinner("Extracting text from uploaded PDFs using OCR..."):
+            with st.spinner("Extracting text from uploaded Image using OCR..."):
                 for single_file in pdf_files:
                     with tempfile.NamedTemporaryFile(delete=False, suffix='.pdf') as tmp_file:
                         tmp_file.write(single_file.getvalue())
@@ -57,10 +57,10 @@ if st.session_state.pdf_uploaded:
             st.session_state.extracted_text = extracted_text
 
             if extracted_text.strip():
-                st.success("✅ Text extracted from all PDFs successfully!")
+                st.success("✅ Text extracted from all image successfully!")
                 st.text_area("📄 Extracted Text", st.session_state.extracted_text, height=300)
             else:
-                st.warning("No text could be extracted. Please check the scanned quality of the PDFs.")
+                st.warning("No text could be extracted. Please check the scanned quality of the image.")
 
         except Exception as main_error:
             st.error(f"An error occurred: {str(main_error)}")
